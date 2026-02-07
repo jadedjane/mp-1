@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Projects | Resume</title>
-        <link rel=""stylesheet" type="text/css"  href="indec.css">
+        <link type="text/css"  rel="stylesheet" href="index.css">
     </head>
     <body>
         <div id="page-wrapper">
@@ -11,25 +11,59 @@
                 <h1>Jenny's Resume</h1>
                 <p>An online website showcasing Jenny's career objective and goals</p>
             </header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="experiences.html">Experience</a></li>
-                    <li><a href="projects.html"></a>Projects</li>
-                    <li><a href="certs.html"></a>Certifications</li>
-                </ul>
-            </nav>
-            <main>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    
-                </ul>
-            </main>
+            <div id="nav-main">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="experiences.html">Experience</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="certs.html">Certifications</a></li>
+                        <li><a href="references.html">References</a></li>
+                    </ul>
+                </nav>
+                <main class="projects">
+                    <div class="project">
+                        <ul>
+                            <li><a href="https://github.com/janeisjaded/Error-Detection-in-Radiation-Oncology">Cancer Treatment Detection</a></li>
+                            <li><a href="https://github.com/janeisjaded/Data-Center-Development-Analysis.git">Data Center Development Analysis</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="calculator">
+                        <h2>Jenny's Calulator</h2>
+                    </div>
+
+                    <div class="calc__inputs">
+                        <div class="field">
+                        <label for="first">First number:</label>
+                        <input id="first" type="number" step="any">
+                    </div>
+
+                    <div class="field">
+                        <label for="second">Second number:</label>
+                        <input id="second" type="number" step="any">
+                        </div>
+                    </div>
+
+                    <div class="calc__buttons">
+                        <button onclick="doAdd()">+</button>
+                        <button onclick="doSub()">-</button>
+                        <button onclick="doMul()">*</button>
+                        <button onclick="doDiv()">/</button>
+                        <button onclick="power()">**</button>
+                        <button onclick="clearCalc()">Clear</button>
+                    </div>
+
+                    <div class="calc__result">
+                        <h2 id="output"></h2>
+                    </div>
+                </main>
+            </div>
             <footer>
                 <p> All rights reserved &#169; </p>
             </footer>
+            <script src="index.js"></script>
         </div>
     </body>
 </html>

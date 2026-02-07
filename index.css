@@ -1,11 +1,13 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    color: rgb(101, 57, 34);
+
 }
 
 #page-wrapper{
     width: 80vw; /*hardware so we use vw*/
-    background-color: blueviolet;
+    background-color: rgb(246, 247, 212);
     margin: 0 auto;
 }
 
@@ -13,22 +15,36 @@
     width: 100%; /*relative to parent so we use percentage*/
     display: flex;
     flex-direction: row;
+    font-family: fantasy;
+
+}
+
+header{
+    padding: 1%;
 }
 
 main{
     width: 70%;
     height: 100vh;
     text-align: center;
-    font-size: calc(2px + 1.5vw);
+    font-size: calc(2px + 2vw);
+    font-family: fantasy;
+    color: rgb(101, 57, 34);
 }
 
 main *{
     margin: 2%;
 }
 
+main img{
+    max-width: 80%;
+    margin: 10% auto;
+}
+
 nav{
     width: 30%;
-    background-color: blanchedalmond;
+    background-color: rgb(101, 57, 34);
+    font-family: fantasy;
 }
 
 nav ul{
@@ -40,7 +56,7 @@ nav ul{
 }
 
 nav li{
-    border: 3px solid white;
+    border: 3px dotted rgb(246, 247, 212);
     margin: 5% auto;
     width: 80%;
     padding: 1%;
@@ -48,7 +64,128 @@ nav li{
 }
 
 nav a{
-    color: aquamarine;
+    color: rgb(126, 255, 246);
     font-size: calc(2px + 1.5vw);
     text-decoration: none;
+}
+
+header, footer{
+    background-color: rgb(126, 255, 246);
+    font-family: fantasy;
+}
+
+@media  screen and (max-width: 750px) {
+    #nav-main{
+        flex-direction: column;
+    }
+    nav, main{
+        width: 100%;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    nav li{
+        width: 18%;
+        padding: 1%;
+        margin: 1%;
+    }
+    header{
+        text-align: center;
+    }
+    main{
+        height: 100vh;
+    }
+}
+
+.project ul{
+  font-size: calc(2px + 2vw);
+  font-family: fantasy;
+}
+
+.calc__inputs {
+  display: flex;
+}
+
+.field input {
+  width: 100%;
+  padding: calc(8px + 0.4vw);
+  border: 2px dashed rgb(101, 57, 34);
+  border-radius: 10px;
+  background-color: rgb(246, 247, 212);
+}
+
+.calc__buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calc__buttons button {
+  flex: 1 1 90px;
+  padding: calc(8px + 0.4vw);
+  border: 2px solid rgb(101, 57, 34);
+  border-radius: 12px;
+  background-color: rgb(126, 255, 246);
+}
+
+.calc__result {
+  border: 3px dotted rgb(101, 57, 34);
+  border-radius: 12px;
+  padding: calc(10px + 0.8vw);
+  display: flex;
+  text-align: center;
+  display: grid;
+}
+
+/* Certifications page */
+.certs-page {
+  display: flex;
+}
+
+/* References page  */
+.references-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(10px + 1vw);
+}
+
+.references-page * {
+  margin: 0;
+}
+
+.ref-title {
+  font-size: calc(18px + 1vw);
+  margin-bottom: calc(12px + 1vw);
+  text-decoration: underline;
+}
+
+.ref-section {
+  width: min(700px, 95%);
+  margin-bottom: calc(18px + 1vw);
+  text-align: center;
+}
+
+.ref-section h3 {
+  margin-bottom: 10px;
+  font-size: calc(14px + 0.6vw);
+}
+
+.ref-table {
+  width: 100%;
+  border: 3px solid rgb(101, 57, 34);
+  background-color: rgba(246, 247, 212, 0.9);
+}
+
+.ref-table th,
+.ref-table td {
+  border: 2px solid rgb(101, 57, 34);
+  padding: calc(8px + 0.3vw);
+  font-size: calc(12px + 0.4vw);
+}
+
+.ref-table th {
+  background-color: rgba(126, 255, 246, 0.35);
 }
